@@ -36,7 +36,18 @@
   --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
-
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  outline: 1px solid rgb(0, 0, 0);
+}
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -109,7 +120,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .loading {
+.loading {
   display: none;
   background: var(--surface-color);
   text-align: center;
@@ -127,6 +138,21 @@ h6 {
   border: 3px solid var(--accent-color);
   border-top-color: var(--surface-color);
   animation: php-email-form-loading 1s linear infinite;
+}
+button{
+  background-color:#149ddd;
+  text-decoration: none;
+  border-radius: 20px;
+  color:white;
+  transition: 0.5s;
+ 
+}
+button:hover{
+ transform: skewY(5deg);
+ background-color: white;
+ color: red;
+ 
+  
 }
 
 @keyframes php-email-form-loading {
@@ -1270,6 +1296,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
